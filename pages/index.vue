@@ -20,6 +20,10 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  async mounted () {
+    this.$mqtt = await this.$mqtt
+    console.log(this.$mqtt)
+  },
   components: {
     Logo
   }
